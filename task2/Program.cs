@@ -14,7 +14,7 @@ int sum=0;
 for(int i = 0; i < massive.Length; i++)
     {
         massive[i] = new Random().Next(0,100);
-        if (massive[i]%2!=0)
+        if(i%2!=0 && i!=0)
         {
             sum=sum+massive[i];
         }
@@ -32,4 +32,4 @@ void PrintArray(int[] col)
     }
 PrintArray(massive);
 Console.WriteLine();
-Console.WriteLine("сумма нечетных чисел в массиве равна " +sum);
+Console.WriteLine("сумма чисел стоящих на нечетных позициях в массиве равна " +sum);
